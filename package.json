@@ -1,0 +1,30 @@
+{
+  "name": "devops",
+  "version": "1.0.0",
+  "description": "Conscious Coffee workflow.",
+  "main": "gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olaolumide/Conscious-Coffee-DevOps.git"
+  },
+  "author": "Olaide Ogunronbi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/olaolumide/Conscious-Coffee-DevOps/issues"
+  },
+  "homepage": "https://github.com/olaolumide/Conscious-Coffee-DevOps#readme",
+  "devDependencies": {
+    "grunt": "^1.3.0",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-imagemin": "^4.0.0",
+    "grunt-contrib-sass": "^2.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-sass": "^3.1.0",
+    "grunt-svgmin": "^6.0.1"
+  }
+}

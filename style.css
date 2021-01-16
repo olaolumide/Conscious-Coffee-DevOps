@@ -1,0 +1,473 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:root {
+  --make-major: #6a4242;
+  --make-words: #fff;
+  --make-menu: #242424;
+  --make-design: #e3e3dd;
+  --make-image: #3b3b3b;
+}
+body {
+  margin: 1em;
+  background: var(--make-menu);
+  color: var(--make-words);
+  font-family: sans-serif;
+  letter-spacing: 2.5px;
+}
+/*.....Hide the hambuger menu here*/
+.logo {
+  display: none;
+}
+/*-----------------------------*/
+#headerMenu {
+  font-size: 12px;
+  margin: 10px;
+  align-items: center;
+  display: flex;
+}
+#headerMenu .logo-image {
+  margin: 10px 10px 10px 10px;
+}
+#about-header .logo-image {
+  margin: 10px;
+}
+.nav_link {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-around;
+  /*margin: 15px;*/
+  margin-left: 50px;
+}
+.nav_link li {
+  display: inline-block;
+  color: var(--make-words);
+  text-decoration: none;
+  margin-left: 45px;
+}
+.nav_link a {
+  color: var(--make-words);
+  text-decoration: none;
+}
+.nav_link a:hover {
+  text-decoration: underline;
+  color: var(--make-major);
+}
+main {
+  justify-content: center;
+}
+main:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 42%;
+  background-color: var(--make-image);
+  z-index: -15;
+  margin-left: auto;
+  margin-right: 20em;
+  margin-right: 13.8em;
+}
+.company {
+  position: absolute;
+  color: var(--make-major);
+  margin: 40px 0 0 123px;
+  font-size: clamp(30px, 10vw, 50px);
+  font-family: "Roboto", sans-serif;
+  z-index: 5;
+}
+.primary-h2 {
+  z-index: -5;
+  width: 100%;
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  margin-right: 3em;
+}
+.primary-h2 .image {
+  max-width: 60%;
+}
+.primary-h2 h2 {
+  max-width: 35%;
+  color: var(--make-design);
+  margin: 170px 40px 10px 10px;
+  font-size: clamp(18px, 10vw, 25px);
+  font-family: "Lobster", cursive;
+  float: left;
+  font-weight: normal;
+}
+
+.coffeetype {
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  gap: 0.5em;
+  grid-template-columns: subgrid;
+  margin-left: 10%;
+  -webkit-grid-template-columns: subgrid;
+}
+.image2 {
+  max-width: 50%;
+  margin-top: 10px;
+}
+.list h3 {
+  font-weight: normal;
+}
+.list {
+  grid-column: 2 / -4;
+  margin-top: -250px;
+  font-family: "Lobster", cursive;
+  font-weight: normal;
+}
+.button {
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 7px;
+  padding: 5px 5px 5px 5px;
+  text-align: center;
+  justify-content: center;
+  box-shadow: 1px 2px 2px 1px grey;
+  font-size: 15px;
+  font-weight: bold;
+  color: #000;
+  width: 150px;
+  display: flex;
+  margin: 30px auto;
+}
+.button a {
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+}
+.button:hover a {
+  color: #fff;
+}
+.button:hover {
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  transition: all 1.5s ease;
+}
+.footer {
+  width: 100%;
+  margin: 50px 0 0 0;
+  padding: 3px 0 3px 0;
+  background-color: var(--make-menu);
+}
+.footer li {
+  display: inline-block;
+  /*margin-bottom: -10px;*/
+}
+.footer a {
+  margin: 20px;
+  color: var(--make-major);
+  text-decoration: none;
+}
+.footer a:hover {
+  color: var(--make-design);
+}
+
+@media (max-width: 768px) {
+  .logo {
+    display: flex;
+    width: 100%;
+    /*margin-left: auto;*/
+    background-color: var(--make-menu);
+    padding: 12px;
+  }
+  #headerMenu {
+    display: none;
+  }
+  .nav-link {
+    display: none;
+  }
+  .menuToggle {
+    position: relative;
+    text-align: right;
+    background-color: transparent;
+    cursor: pointer;
+    width: 80%;
+    z-index: 10;
+  }
+  .menuToggle ul {
+    transform: translateX(0);
+    transition: all 0.2s ease;
+    background-color: #3b3b3b;
+    margin-left: 15px;
+    position: absolute;
+  }
+  .menuToggle ul li {
+    list-style: none;
+    margin: 15px;
+    margin-left: 40px;
+    display: block;
+    font-size: 12px;
+    /*font-weight: bold;
+    //text-align: right;*/
+  }
+  .menuToggle li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  main:after {
+    display: none;
+  }
+  .primary-h2 {
+    margin-top: 35px;
+    flex-flow: column wrap;
+  }
+  .company {
+    margin: 5px 0 0 0;
+    text-align: center;
+  }
+  .primary-h2 .image {
+    max-width: 100%;
+  }
+  .primary-h2 h2 {
+    max-width: 100%;
+    margin: 20px 10px 20px 10px;
+  }
+  .image2 {
+    max-width: 50%;
+  }
+  .coffeetype {
+    margin-left: 0;
+  }
+  .list {
+    margin-top: 20px;
+  }
+  .footer {
+    background-color: var(--make-menu);
+  }
+  .footer li {
+    margin-top: 5px;
+  }
+  /*......About -------*/
+  .about-header img,
+  .nav_link {
+    display: none;
+  }
+  main .h1 {
+    color: #000;
+  }
+  #about-p-container {
+    flex-direction: column;
+    /*-webkit-gap: 20px;*/
+  }
+  #about-p-container .about-p {
+    margin-top: 20px;
+  }
+  #about-bt {
+    margin: 30px 0 0 80px;
+  }
+  /*-----Our shop ----------*/
+  .concious-shop .shop-list {
+    width: 32%;
+    /*display: flex;*/
+    flex-direction: column;
+  }
+
+  .concious-shop .concious-shop_h2 {
+    color: #000;
+  }
+
+  /*---------Contact us-------------*/
+  .contactUs .p,
+  .p1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .form {
+    margin: 0 auto;
+  }
+  form {
+    flex-grow: 2;
+    max-width: 100%;
+  }
+}
+
+/*------- Home page ends here ------ --*/
+
+/*----- about Us --------*/
+.body {
+  background-color: transparent;
+}
+.about-header {
+  background-color: var(--make-menu);
+  font-size: 12px;
+  margin: -16px 0 0 0;
+  align-items: center;
+  display: flex;
+  color: #fff;
+}
+.h1 {
+  text-align: center;
+  color: #fff;
+  margin: 34px auto;
+}
+.aboutUs {
+  max-width: 100%;
+  margin-bottom: 0;
+}
+.aboutUs .about-image {
+  max-width: 100%;
+  filter: drop-shadow(-1px 1.5px 1.5px black);
+  margin: 50px auto;
+  display: flex;
+}
+#about-p-container {
+  width: 100%;
+  display: flex;
+  /*flex-flow: row wrap;*/
+}
+#about-p-container .about-p {
+  background: var(--make-menu);
+  margin: 40px auto;
+  margin-left: 10px;
+  font-family: "Lobster", cursive;
+  filter: text-shadow(-1px 1.5px 1.5px black);
+}
+.aboutUs .about-p p {
+  margin: 10px;
+}
+.aboutUs .image2,
+.image3 {
+  margin-left: 14%;
+  border-radius: 10%;
+  width: 30%;
+}
+#about-bt {
+  display: flex;
+  margin: 30px auto;
+}
+
+/*------- Our Shop -------*/
+.concious-shop {
+  /*color: black;*/
+  font-family: "Lobster", cursive;
+  text-align: center;
+}
+.concious-shop .list h3 {
+  text-align: center;
+}
+.concious-shop_h2 {
+  font-family: "Lobster", cursive;
+  /*margin-left: auto;*/
+  color: #fff;
+}
+.concious-shop .image10 {
+  max-width: 100%;
+  filter: drop-shadow(-1px 1.5px 1.5px black);
+  margin: 50px auto;
+  display: flex;
+}
+
+/*------- Contact Us starts here ------*/
+
+.contactUs .p,
+.p1 {
+  display: flex;
+  margin: 10px 0 0 0;
+  color: #fff;
+  background-color: var(--make-image);
+  width: 49%;
+  font-family: "Lobster", cursive;
+}
+.contactUs .p1 {
+  margin-left: auto;
+}
+.contactUs p {
+  margin: 10px 0 10px 15px;
+}
+.form {
+  display: flex;
+  width: 100%;
+  color: #fff;
+  font-size: 1em;
+  justify-content: center;
+  font-family: "Lobster", cursive;
+}
+form {
+  background-color: var(--make-image);
+  padding: 40px 0;
+  width: 65%;
+  margin: 40px auto;
+}
+fieldset {
+  background-color: var(--make-image);
+  max-width: 98%;
+  margin: auto;
+}
+legend {
+  color: white;
+  background-color: var(--make-image);
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+label abbr {
+  color: red;
+}
+
+onImage {
+  font-weight: bold;
+  font-size: 35px;
+  top: 450px;
+  /*margin: 0 0 0 33%;*/
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.1);
+  color: #f19;
+  text-align: center;
+  max-width: 100%;
+}
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+  text-align: center;
+  margin: 7px 20px 15px 0;
+  padding: 10px;
+  border: 1px solid grey;
+  font-size: 15px;
+  width: 100%;
+}
+input:invalid {
+  border: 1.5px solid #c00000;
+}
+input:focus:invalid {
+  outline: none;
+}
+input:focus {
+  color: green;
+}
+.gender {
+  width: 25%;
+  margin: 10px 0 0 0;
+}
+.genderM {
+  width: 25%;
+  margin: 10px 0 30px 0;
+}
+textarea {
+  width: 100%;
+  margin: 10px 0 50px 0;
+  text-align: center;
+}
+#success {
+  text-align: center;
+  color: green;
+}
+.Form-error {
+  padding: 0;
+  margin: -10px 0 10px 0;
+  color: red;
+  font-family: aria;
+  display: none;
+}
+.Form-error:active {
+  padding: 5px;
+}

@@ -1,0 +1,134 @@
+<!Doctype html>
+<html lang="en">
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content=" Letha shoe ">
+	<meta name="Keywords" Content=" Bag, leather shoes, designer shoe, organic leather shoe, shoe on sale, handcrafted leather shoe" />
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-compatible" content="IE=edge" />
+	<title> Conscious Coffee </title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
+</head>
+<body class="body">
+	<div id ="bodyWrapper" >
+	
+		<div class= "logo" > <a href="index.html" class="logo-image" > <img src="images/conscious-coffee.png" width ="80px" alt="The best coffee shop" title="Conscious coffee" /> </a> 
+		
+			<div id ="menu" class = "menuToggle" > Menu <i class="fa fa-bars" ></i> 
+				<div id=" menu" class="menu" >		
+					<nav> 
+						<ul class=" menuToggle" style= "display: none;">
+							<li><a href="index.html"> HOME </a></li>
+							<li><a href="aboutUs.html"> ABOUT US </a></li>
+							<li><a href="ourShop.html"> OUR SHOPS </a></li>
+							<li><a href="contactUs.html"> CONTACT US </a></li>			
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<header id ="about-header" class="about-header" >		
+			<a href="index.html" class="logo-image" > <img src="images/conscious-coffee.png" width ="80px" alt="The best coffee shop" title="Conscious coffee" /> </a>		
+			<nav class="nav_link" > 
+				<ul>
+					<li><a href="index.html"> HOME </a></li>
+					<li><a href="aboutUs.html"> ABOUT US </a></li>
+					<li><a href="ourShop.html"> OUR SHOPS </a></li>
+					<li><a href="contactUs.html"> CONTACT US </a></li>										
+				</ul>
+			</nav>
+		</header>
+		
+		<main role="main">
+			<h1 class="h1"> Contact Us </h1>			
+			
+			<div class ="contactUs">
+				<div class="p" >
+					<p> We are always ready to welcoming you at Conscious Coffee. Your comments and all your feed back on our sevices during your 
+						visit to Conscious Coffee shop are taken seriously. Share your experience with us.
+					</p>
+				</div>
+				<div class="p1" >
+					<p> AS a growing coffee company, we are welcomimg hard working team workers who are willing to join us at Conscious Coffee 
+						company. Send us a message showing your interest to joining us.
+					</p>
+			</div>
+				<div class="form">	
+					<form novalidate>
+						<fieldset>
+							<legend> Visitors / Customers </legend>
+							<div class="form-group">
+								<label for="visitors"> Name <abbr title="This field is mandatory" aria-label="required" >*</abbr> </label> 	
+								<input class = "input" type = "text" name = "First-name" placeholder = "First name" required minlength="3" pattern = "^[a-z A-Z]+$" />
+									<span class="Form-error" > Write your name <span>	
+							</div>
+							
+							<div class="form-group">
+								<label for="visitors" > Last name <abbr title="This field is mandatory" aria-label="required" >*</abbr> </label> 
+								<input  class = "input" type = "text" name = "Last-name" placeholder = "Last name" required pattern = "^[a-z A-Z]+$" /> 		
+									<span class="Form-error" > Your last name please. <span>
+							</div>
+							
+							<div class="form-group">
+								<label for="visitors"> E-mail <abbr title="This field is mandatory" aria-label="required" >*</abbr> </label> 
+								<input  class = "input" type="text" name="E-mail address" placeholder="Your e-mail" required minlength="8" pattern="^[a-z A-Z 0-9]+@[a-z A-Z 0-9-]+(?:\.[a-z A-Z0-9]+)+$" />
+								 	<span class="Form-error" >Enter your e-mail <span>
+							</div>
+							
+							<div class="form-group">
+							<label for="visitors"> Address </label> 
+							<input  class = "input" type="text" name="Address" placeholder="Contact address" pattern = "^[a-z A-Z 0-9]+$" />							
+							</div>
+							
+							<div class="form-group">
+								<label for="visitors"> Phone number </label> 
+								<input  class = "input" type="text" name="Telephone" placeholder="+47" pattern= "^\(?:\ (? ( [0-9] {3} ) \) ?[-.] ?) ? ( [0-9] {3} ) [.-]? ( [0-9] {4} )+$" /> 							
+							</div>
+							
+							<div class="form-group">
+							<label for="visitors"> Prefered Coffe </label>
+							<input  class = "input" type="text" name="type" Placeholder="The coffee you like" /> 
+							</div>
+							
+							<div class="form-group">
+							<label class="gender" for="visitors">Male </label>
+							<input class="genderM" type="radio" name="Gender" /> 
+							
+							<label  class="gender" for="visitors"> Female </label>
+							<input  class="genderM" type="radio" name="Gender" />
+						</div>
+						
+						<div class="form-group">
+							<label for="inputtype"> Message / Comment <abbr title="This field is mandatory" aria-label="required" >*</abbr> </label> <br/>
+							<textarea name="comments" cols="30" rows="10"  maxlength="100" placeholder=" Enter your message/comment here.... " > </textarea>
+								<span class="Form-error" > <span>
+							</div>
+							<span id="success" ></span>
+							
+							<button type="button"  onclick="submitForm()" class="button"> Send </button>
+							
+						</fieldset>
+					</form>
+
+				</div>
+			</div>
+		</main>
+	</div>
+	
+	<footer class="footer">
+		<nav> 
+			<ul>
+				<li><a href="aboutUs.html"> ABOUT US </a></li>|
+				<li><a href="ourShop.html"> OUR SHOPS </a></li>|
+				<li><a href="contactUs.html"> CONTACT US </a></li>|
+				<li> Copywright &copy Conscious Coffee By Olaide </li>
+			</ul>
+		</nav>
+	</footer>
+
+	<script src="script/coffeeProgramm.js"> </script>
+</body>
+</html>
