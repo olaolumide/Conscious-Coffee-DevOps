@@ -3,9 +3,6 @@ module.exports = function (grunt) {
     const pngquant = require('imagemin-optipng');
     const gifsicle = require('imagemin-gifsicle');
 
-    //const imageminJpegtran = require('imagemin-jpegtran');
-    //const imageminPngquant = require('imagemin-pngquant');
-
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
@@ -15,8 +12,8 @@ module.exports = function (grunt) {
                 banner: '\n\n//--------------------------\n'/*Its used to demacate scripts*/
             },
             dist: {
-                src: ['scriptJs/*.js'/*This get any js file*/],
-                dest: 'dist/script/script.js'
+                src: ['script/*.js'/*This get any js file*/],
+                dest: 'dist/script/script.js' /*All the Js are configure here*/
             }
         },//Js initial configurations.
 
@@ -45,7 +42,7 @@ module.exports = function (grunt) {
                     src: [
                         'dist/css/minified/styleMedia.min.css',
                         'dist/*.html',
-                        'scriptJs/*.js'
+                        'script/*.js'
                     ]
                 },
                 options: {
@@ -80,18 +77,7 @@ module.exports = function (grunt) {
                  }
             }*/
 
-        },//Image compression
-
-        /*cacheBust:{
-          taskName:{
-              options:{
-                 assets:[
-                    'assets/**.sass/*', 'assets/**.js/*', 'assets/**.html/*'
-                 ]
-             },
-             src:['index.html']
-          }  
-        },*/
+        },//Image compression        
 
         watch: {
             css: {
@@ -110,7 +96,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
-    //grunt.loadNpmTasks('grunt-cache-bust');
     grunt.loadNpmTasks('grunt-browser-sync');
 
     grunt.registerTask('default', ['concat', 'sass', 'cssmin', 'imagemin', 'browserSync', 'watch']);
