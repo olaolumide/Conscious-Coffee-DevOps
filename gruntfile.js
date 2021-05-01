@@ -2,6 +2,8 @@ module.exports = function (grunt) {
     const mozjpeg = require('imagemin-jpegtran');
     const pngquant = require('imagemin-optipng');
     const gifsicle = require('imagemin-gifsicle');
+    var loadash = require('lodash');
+    var newArr = _.map(arr, fn);
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -35,6 +37,13 @@ module.exports = function (grunt) {
                 dest: 'dist/css/minified/style.min.css'
             }
         },//Minifying the style sheet
+
+        lodash: {
+            build: {
+                dest: 'build/lodash.build.js'
+                
+            }
+        },
 
        browserSync: {
             dev: {
@@ -95,9 +104,10 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-lodash');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-browser-sync');
 
-    grunt.registerTask('default', ['concat', 'sass', 'cssmin', 'imagemin', 'browserSync', 'watch']);
+    grunt.registerTask('default', ['concat', 'sass', 'cssmin', 'lodash', 'imagemin', 'browserSync', 'watch']);
 
 };
